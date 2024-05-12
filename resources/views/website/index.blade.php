@@ -147,7 +147,7 @@
 </div>
 <div class="hubungi-kami" style="background-color: #FBFCFC;">
     <div class="container">
-        <h2 class="text-center pb-4" style="padding-top: 100px;color:  #151E28;">Hubungi Kami</h2>
+        <h1 class="text-center pb-4" style="padding-top: 100px;color:  #151E28;">Hubungi Kami</h1>
         @if ($contactWebsite = \App\Models\ContactWebsite::first())  
         @php
       $contactWebsite = \App\Models\ContactWebsite::first()->get();
@@ -156,18 +156,18 @@
     @foreach ($contactWebsite as $value)  
     <div class="row" style="padding-bottom: 100px;">
         <div class="col-md-4">
-            <div class="card-body contact-hubungi-kami">
-                <i class="bi bi-calendar-range icon-hubungi-kami"></i>
-                <h3 class="font-weight-bold">KANTOR KAMI</h3>
+            <div class="card card-body contact-hubungi-kami" style="text-align: center">
+                <i class="fas fa-map-marker-alt"style="margin-bottom:10px"></i>
+                <h4 class="font-weight-bold">KANTOR KAMI</h4>
                 <p style="text-transform:capitalize">{{$value->alamat}}</p>
                 <p><a href="https://maps.app.goo.gl/8Yb7GbD8mDHbScFf9?g_st=iw" target="_blank" style="color:#ab6a3e;text-decoration: underline;font-weight: bold;">Lihat di
                     maps</a></p>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card-body contact-hubungi-kami">
-                <i class="bi bi-telephone icon-hubungi-kami"></i>
-                <h6 class="font-weight-bold">HUBUNGI KAMI DI</h6>
+            <div class="card card-body contact-hubungi-kami" style="text-align: center">
+                <i class="fas fa-phone-square" style="margin-bottom:10px"></i>
+                <h4 class="font-weight-bold">HUBUNGI KAMI DI</h4>
                 <b>
                     <p>{{$value->no_telp1}}</p>
                     @if ($value->no_telp2 == null)
@@ -187,9 +187,9 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card-body contact-hubungi-kami">
-                <i class="bi bi-people icon-hubungi-kami"></i>
-                <h6 class="font-weight-bold">CUSTOMER SERVICE</h6>
+            <div class="card card-body contact-hubungi-kami" style="text-align: center">
+                <i class="fas fa-envelope" style="margin-bottom: 10px"></i>
+                <h4 class="font-weight-bold">CUSTOMER SERVICE</h4>
                 <p>Butuh bantuan kami? <br> Kami dengan senang hati <br> membantu Anda.</p>
 
                 <p><a href="https://wa.me/62895321217600" target="_blank" style="color:#ab6a3e;text-decoration: underline;font-weight: bold;">Chat via
@@ -201,18 +201,20 @@
     @else
         <div class="row" style="padding-bottom: 100px;">
             <div class="col-md-4">
-                <div class="card-body contact-hubungi-kami">
-                    <i class="bi bi-calendar-range icon-hubungi-kami"></i>
-                    <h6 class="font-weight-bold">KANTOR KAMI</h6>
+                {{-- <div class="card card-body contact-hubungi-kami"  style="text-align: center;height:230px;overflow:hidden"> --}}
+                <div class="card card-body contact-hubungi-kami"  style="text-align: center;">
+                    <i class="fas fa-map-marker-alt"style="margin-bottom:10px"></i>
+                    <h4 class="font-weight-bold">KANTOR KAMI</h4>
                     <p>Jl. Jakarta, <br> Jakarta, Indonesia</p>
                     <p><a href="https://maps.app.goo.gl/8Yb7GbD8mDHbScFf9?g_st=iw" target="_blank" style="color:#ab6a3e;text-decoration: underline;font-weight: bold;">Lihat di
                             maps</a></p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card-body contact-hubungi-kami">
-                    <i class="bi bi-telephone icon-hubungi-kami"></i>
-                    <h6 class="font-weight-bold">HUBUNGI KAMI DI</h6>
+                {{-- <div class="card card-body contact-hubungi-kami" style="text-align: center;height:230px;overflow:hidden"> --}}
+                <div class="card card-body contact-hubungi-kami" style="text-align: center;">
+                    <i class="fas fa-phone-square" style="margin-bottom:10px"></i>
+                    <h4 class="font-weight-bold">HUBUNGI KAMI DI</h4>
                     <b>
                         <p>(+62) - 0895-3212-17600</p>
                     </b>
@@ -223,11 +225,11 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card-body contact-hubungi-kami">
-                    <i class="bi bi-people icon-hubungi-kami"></i>
-                    <h6 class="font-weight-bold">CUSTOMER SERVICE</h6>
+                {{-- <div class="card card-body contact-hubungi-kami" style="text-align: center;height:230px;overflow:hidden"> --}}
+                <div class="card card-body contact-hubungi-kami" style="text-align: center;">
+                    <i class="fas fa-envelope" style="margin-bottom: 10px"></i>
+                    <h4 class="font-weight-bold">CUSTOMER SERVICE</h4>
                     <p>Butuh bantuan kami? <br> Kami dengan senang hati <br> membantu Anda.</p>
-
                     <p><a href="https://wa.me/62895321217600" target="_blank" style="color:#ab6a3e;text-decoration: underline;font-weight: bold;">Chat via
                             Whatsapp</a></p>
                 </div>
